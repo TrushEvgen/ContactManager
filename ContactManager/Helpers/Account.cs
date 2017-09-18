@@ -17,7 +17,6 @@ namespace ContactManager.Helpers
     {
         public static Model.AccountModel ConvertToModel(this Intent data)
         {
-            string z = nameof(Model.AccountModel);
             var jsonObject = data.GetStringExtra(nameof(Model.AccountModel));
             if (!string.IsNullOrEmpty(jsonObject))
                 return JsonConvert.DeserializeObject<Model.AccountModel>(jsonObject);

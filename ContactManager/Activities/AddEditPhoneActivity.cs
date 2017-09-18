@@ -13,7 +13,6 @@ namespace ContactManager
     {
         EditText personName;
         EditText phone;
-        int Id = -1;
         Model.AccountModel accountModel;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -52,7 +51,6 @@ namespace ContactManager
                 accountModel.Name = personName.Text;
                 accountModel.Phone = phone.Text;
             }
-            string z2 = nameof(Model.AccountModel);
             intent.PutExtra(nameof(Model.AccountModel), Helpers.Helpers.ConvertToObject(accountModel));
 
             //intent.PutExtra(nameof(am.Name),am.Name);
